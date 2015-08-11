@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{% load i18n %}
+{% block title %}{% trans "All Quizzes" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "List of Courses" %}</h1>
+
+        {% for course in course_list %}
+
+<table border="1" style="width:100%">
+  <tr>
+    <td><a href="/multichoice/{{ course.course }}"> {{ course.course }} </a></td>
+
+  </tr>
+</table>
+			  
+  
+        {% endfor %}
+{% endblock %}

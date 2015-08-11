@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+{% load i18n %}
+{% block title %}{% trans "All Quizzes" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "List of Sub Topics" %}</h1>
+        {% for goal in goal_list %}
+        
+<table border="1" style="width:100%">
+  <td>
+        
+       <tr> <a href="/multichoice/{{ goal.course }}/{{ goal.category }}/{{ goal.sub_category }}/{{ goal.goal }}">{{ goal.goal }}</a><tr>
+  </td>
+</table>      
+        {% endfor %}
+
+
+{% for mcquestion in mcquestion_list %}
+  			
+			  <h4>Subject: {{ mcquestion.category }}</h4>
+			  <h6>Topic: {{ mcquestion.sub_category }}</h6>
+			  <h6>Goal: {{ mcquestion.goal }}</h6>
+			  <p><b>Question: </b> {{ mcquestion.content }}</p>
+             
+         {% if mcquestion.figure %}
+    <img src="{{ mcquestion.figure.url }}" alt="{{ mcquestion.content }} height="100" width="100"" />
+         {% endif %}
+		  
+{% for answer in mcquestion.answer_set.all %}
+
+  			<tr class="option_holder o4_holder">
+                                </td>
+                                <td class="col3">
+                                    <img style="display:none;" class="option_image o4_img" />
+                                    <div class="option_text o4_text">{{ answer.content }}</div>
+                                </td>
+                            </tr>
+        {% endfor %}
+
+<p><b>Solution: </b> {{ mcquestion.explanation }}</p>
+
+        {% endfor %}
+
+{% endblock %}
