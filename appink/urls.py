@@ -21,8 +21,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     #url(r'^calcu/$', 'calculator.cal.views.calcu',name='calcu'),
-    url(r'^tinymce/', include('tinymce.urls')),
-    url(r'^accounts/', include('allauth.urls')),
+    #url(r'^tinymce/', include('tinymce.urls')),
+    #url(r'^accounts/', include('allauth.urls')),
     url(r'^multichoice/', include('multichoice.urls')),
     url(r'^q/', include('quiz.urls')),
     url(r'^blog/', include('blog.urls')),

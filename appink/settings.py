@@ -48,11 +48,11 @@ INSTALLED_APPS = (
     'multichoice',
     'true_false',
     'essay',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.facebook',
-    'tinymce',
+    #'allauth',
+    #'allauth.account',
+    #'allauth.socialaccount',
+    #'allauth.socialaccount.providers.facebook',
+   # 'tinymce',
     #'calculator',
 )
 

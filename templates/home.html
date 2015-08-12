@@ -47,55 +47,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% block head_title %}{% endblock %}</title>
-    {% block extra_head %}
-    {% endblock %}
-  </head>
-  <body>
-    {% block body %}
-
-    {% if messages %}
-    <div>
-      <strong>Messages:</strong>
-      <ul>
-	{% for message in messages %}
-	<li>{{message}}</li>
-	{% endfor %}
-      </ul>
-    </div>
-    {% endif %}
-
-  
-    {% block content %}
-    {% endblock %}
-    {% endblock %}
-    {% block extra_body %}
-    {% endblock %}
+   
   </body>
 </html>
 
 	<div class="container shadow">
 		
 
-{% if user.is_authenticated %}
-<div class="navbar navbar-inverse top-bar hidden-xs">
-	<div class="container">
-		
-			<div class="collapse navbar-collapse">
-				<div class="navbar-form navbar-right">
-					
-					<div class="btn-group">
-						<div class="dropdown-toggle btn-link login-menu-toggle link-white" data-toggle="dropdown">Sign Out</div>
-						<ul class="dropdown-menu dropdown-menu-left">
-							<li><a href="{% url 'account_logout' %}">Student</a></li>
-						</ul>
-					</div>
-					
-					
-					<div class="btn-group">
-						<button type="button" cclass="btn btn-warning btn-header-signup dropdown-toggle text-uppercase" data-toggle="dropdown">Sign Up <span class="caret"></span></button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="{% url 'account_email' %}">Change Email</a></li>
+
 							
 						</ul>
 					</div>
@@ -104,7 +63,6 @@
 		
 	</div>
 </div>
-{% else %}
 
 <div class="navbar navbar-inverse top-bar hidden-xs">
 	<div class="container">
@@ -115,7 +73,6 @@
 					<div class="btn-group">
 						<div class="dropdown-toggle btn-link login-menu-toggle link-white" data-toggle="dropdown">Sign In</div>
 						<ul class="dropdown-menu dropdown-menu-left">
-							<li><a href="{% url 'account_login' %}">Student</a></li>
 						</ul>
 					</div>
 					
@@ -123,7 +80,7 @@
 					<div class="btn-group">
 						<button type="button" cclass="btn btn-warning btn-header-signup dropdown-toggle text-uppercase" data-toggle="dropdown">Sign Up <span class="caret"></span></button>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="{% url 'account_signup' %}">Student</a></li>
+							
 							
 						</ul>
 					</div>
@@ -132,7 +89,6 @@
 		
 	</div>
 </div>
-{% endif %}
 <nav class="navbar navbar-default navigation-bar" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
