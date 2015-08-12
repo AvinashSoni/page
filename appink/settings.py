@@ -134,7 +134,9 @@ STATICFILES_DIRS = (
    # os.path.join(BASE_DIR, 'static'),
     #'C:/Users/yogesh soni/Desktop/appink/uploads',
 )
-
+MEDIA_DIRS = (
+	
+)
 
 
 STATICFILES_FINDERS = (
