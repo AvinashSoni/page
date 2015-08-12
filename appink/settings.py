@@ -71,6 +71,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'appink.urls'
 
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
