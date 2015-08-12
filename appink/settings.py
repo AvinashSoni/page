@@ -124,14 +124,14 @@ LOGIN_REDIRECT_URL = '/'
 STATIC_URL = '/static/'
 
 TEMPLATES_DIRS = (
-    'C:/Users/yogesh soni/Desktop/appink/templates',
-    'C:/Users/yogesh soni/Desktop/appink/templates/quiz',
+    #'C:/Users/yogesh soni/Desktop/appink/templates',
+    #'C:/Users/yogesh soni/Desktop/appink/templates/quiz',
     #'C:/Users/yogesh soni/Desktop/appink/templates/admin',
     #'C:/Users/yogesh soni/Desktop/appink/templates/quiz/quiz',
 )
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+   # os.path.join(BASE_DIR, 'static'),
     #'C:/Users/yogesh soni/Desktop/appink/uploads',
 )
 
@@ -146,7 +146,8 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 )
-
-STATIC_ROOT = "C:/Users/yogesh soni/Desktop/appink/static_root"
-MEDIA_ROOT = "C:/Users/yogesh soni/Desktop/appink/media"
-MEDIA_URL = "/media/"
+STATIC_ROOT = os.path.join( os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static')
+#STATIC_ROOT = "C:/Users/yogesh soni/Desktop/appink/static_root"
+#MEDIA_ROOT = "C:/Users/yogesh soni/Desktop/appink/media"
+MEDIA_ROOT= ''
+MEDIA_URL = '/media/'
